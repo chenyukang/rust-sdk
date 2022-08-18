@@ -21,7 +21,9 @@ async-trait = "0.1"
 tonic-build = "0.5"
 
 [dev-dependencies]
-tokio = { version = "1", features = ["full"] }
+#tokio = { version = "1", features = ["full"] }
+tokio = { git="https://github.com/WasmEdge/tokio.git", branch = "wasmedge", features = ["rt", "macros", "net", "time"]}
+
 
 [[example]]
 name = "client"
